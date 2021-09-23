@@ -1,5 +1,5 @@
 package com.anagram;
 
-public class AnagramList {
+public class AnagramsList {
   
 }

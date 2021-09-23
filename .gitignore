@@ -1,0 +1,17 @@
+# Editor
+.idea
+
+# Compiled Class File
+*.class
+
+# Log Files
+*.log
+
+# Package Files
+*.jar
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual Machine crash logs
+hs_err_pid*
