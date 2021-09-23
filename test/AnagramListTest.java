@@ -40,7 +40,7 @@ public class AnagramListTest {
     final File fileName = new File("resources/wordList.txt");
     final FileReader inputFile = new FileReader(fileName);
     final BufferedReader reader = new BufferedReader(inputFile);
-    final Collection<ArrayList<String>> anagramsInsideFile = AnagramsList.anagramsInsideFile(reader.lines());
+    final Collection<ArrayList<String>> anagramsInsideFile = AnagramsList.anagramsListInsideFile(reader.lines());
     assertEquals(20683, anagramsInsideFile.size());
   }
 }
