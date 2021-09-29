@@ -36,11 +36,18 @@ public class AnagramListTest {
   }
 
   @Test
+  public void testIfTwoAnagramsWithUpperCaseFirstLetterStringsReturnOneCollection() {
+    final String[] wordList = {"Fresher", "Refresh"};
+    final Stream<String> wordStream = Arrays.stream(wordList);
+    assertEquals(1, AnagramsList.anagramsListInsideFile(wordStream).size());
+  }
+
+  @Test
   public void testIfReturnAnagramsOfInputFile() throws FileNotFoundException {
     final File fileName = new File("resources/wordList.txt");
     final FileReader inputFile = new FileReader(fileName);
     final BufferedReader reader = new BufferedReader(inputFile);
     final Collection<ArrayList<String>> anagramsInsideFile = AnagramsList.anagramsListInsideFile(reader.lines());
-    assertEquals(20683, anagramsInsideFile.size());
+    assertEquals(30404, anagramsInsideFile.size());
   }
 }
