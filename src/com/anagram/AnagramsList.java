@@ -11,7 +11,7 @@ public class AnagramsList {
     ConcurrentHashMap<String, ArrayList<String>> anagramsHash = new ConcurrentHashMap<>();
 
     wordStream.parallel().forEach(word -> {
-      char[] charWord = word.toCharArray();
+      char[] charWord = word.toLowerCase().toCharArray();
       Arrays.sort(charWord);
       String sortedWord = new String(charWord);
 
